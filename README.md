@@ -1,9 +1,12 @@
 # Fake-Image_Detection
 
-# Contents
+## Contents
+
 * Methods
   * Error Level Analysis & CNN
   * MesoNet
+  * Cross Entropy using Neural Network
+  * 
   
 
 
