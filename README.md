@@ -190,10 +190,76 @@ methods on real-world data while spending minimal efforts on preprocessing and f
 
 ## 4. Convolution Neural Network (CNN)
 
+A convolutional neural network is a type of neural network that is most often applied to image processing
+problems. We’ve probably seen them anywhere a computer is identifying objects in an image, but you
+can also use CNNs in natural language processing projects too. The fact that they are useful for these fastgrowing
+areas is one of the main reasons they’re so important in deep learning and artificial intelligence
+today.
+
+Let’s first take a regular neural network. A regular neural network has an input layer, hidden layers, and
+an output layer. The input layer accepts input in different forms while the hidden layers perform
+calculations on these inputs. The output layer then delivers the outcome of the calculation and
+extractions. Each of these layers contains neurons that are connected to neurons in the previous layer
+and each neuron has its own weight. This means you aren’t making assumptions about the data being fed
+into the network. Great usually but not if you’re working with images or language.
+
+![image](https://user-images.githubusercontent.com/79482851/166132703-1aa83169-7d25-49c9-b78b-bf37f7335464.png)
+
+CNNs work differently as they treat data as spatial. Instead of neurons being connected to every neuron
+in the previous layer, they are instead only connected to neurons close to it and all have the same weight.
+The simplification in the connections means the network upholds the spatial aspect of the data set.
+
+The word convolutional refers to the filtering process that happens in this type of network. Think of it this
+way, an image is complex. A convolutional neural network simplifies it, so it can be better processed and
+understood.
+
 ### Setup
+
+* Dataset
+  * The training and testing dataset can be found under the "data" folder
+  * For the example of the ipynb my files are saved in a google drive folder at "/content/drive/My Drive/Colab Notebooks/Artificial Intelligence/Data/dataset"
+  * To run the same .ipynb file, you must download the data and create a similar directory structure.
+
+The dataset has been obtained from Kaggle with the dataset called Real and Fake Face Detection. It has
+been published by the Computational Intelligence and Photography Lab.
+Department of Computer Science, Yonsei University
+https://www.kaggle.com/datasets/ciplab/real-and-fake-face-detection
+
 ### Model
-### Dataset
+
+The ReLU layer acts as an activation function, ensuring non-linearity as the data moves through each layer
+in the network. Without it, the data being fed into each layer would lose the dimensionality that we want
+to maintain. The fully connected layer meanwhile allows you to perform classification on your dataset.
+
+![image](https://user-images.githubusercontent.com/79482851/166132770-b2a210b7-e7e1-4799-b84d-8f0d9a7e365a.png)
+
+CNN is the most important, so let’s start there.
+It allows by placing a filter over an array of image pixels. This then creates what’s called a convolved
+feature map. It’s a bit like looking at an image through a window, which allows you to see specific features
+you might not otherwise be able to see.
+
+![image](https://user-images.githubusercontent.com/79482851/166132795-70835129-6b73-4c8c-b4e8-dd64a3d23be1.png)
+
+Next, we have the pooling layer. This down samples or reduces the sample size of a particular feature
+map. This also makes processing much faster as it reduces the number of parameters the network needs
+to process. The output of this is a pooled feature map. There are two ways to do this: max pooling, which
+takes the maximum input of a convolved feature, or average pooling, which simply takes the average.
+
+These steps amount to feature extraction whereby the network builds up a picture of the image data
+according to its own mathematical rules. If you want to perform classification, you’ll need to move into
+the fully connected layer. To do this, you’ll need to flatten things out. Remember, a neural network with
+a more complex set of connections can only process linear data.
+
+![image](https://user-images.githubusercontent.com/79482851/166132748-d1d44aed-1ea7-45b7-9d05-ee4a98777f53.png)
+
+There are number of ways you can train a CNN. If you are working with unlabeled data, you can use
+unsupervised learning methods. One of the best popular ways of doing this is autoencoders. This allows
+you to squeeze data in a space with low dimensions, performing calculations in the first part of the CNN.
+Once this is done, you’ll then need to reconstruct with additional layers that up sample the data you have.
+
 ### Results
+
+![image](https://user-images.githubusercontent.com/79482851/166132740-08af4bab-373c-432c-b933-18f21605027f.png)
 
 ## 5. Genetative Adversarial Networks (GAN)
 
