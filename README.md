@@ -364,5 +364,11 @@ https://youtu.be/uqomO_BZ44g
 
 https://machinelearningmastery.com/what-are-generative-adversarial-networks-gans/
 
+https://github.com/agusgun/FakeImageDetector
+
+https://www.kaggle.com/datasets/ciplab/real-and-fake-face-detection https://www.youtube.com/watch?v=jwpSMg6Ebp0
+
+https://github.com/agusgun/FakeImageDetector
+
 [Back to Top](#Fake-Image-Detection-using-Deep-Learning)
   <a name="Fake-Image-Detection-using-Deep-Learning"></a>    
