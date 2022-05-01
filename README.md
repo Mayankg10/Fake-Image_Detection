@@ -18,7 +18,7 @@ Using latest image editing softwares, it is possible to make alterations on imag
 
 ## 1. Error Level Analysis (ELA)
 
-### Setup Information 
+### Setup
 ### Model
 ### Dataset
 ### Results
@@ -35,7 +35,7 @@ replaced by someone else’s likeness
 
 ![image](https://user-images.githubusercontent.com/79482851/166126379-74996175-0fcd-4f7c-b194-e3c7492291ee.png)
 
-### Setup Information 
+### Setup
 * Dataset
   * The training and testing dataset can be found under the "data" folder
   * For the example of the ipynb my files are saved in a google drive folder at
@@ -89,7 +89,7 @@ Local connections means that each neuron in layer n-1 is connected to all neuron
 between neurons in layer n-1 and some neurons in layer n. This feature helps speed up the file
 transfer between neurons in each layer.
 
-### Setup Information 
+### Setup
 * Dataset
   * For collecting data, I chose the Mnist database that can be downloaded
 directly on the Internet. This is a database that provides handwritten data
@@ -155,14 +155,14 @@ methods on real-world data while spending minimal efforts on preprocessing and f
 
 ## 4. Convolution Neural Network (CNN)
 
-### Setup Information 
+### Setup
 ### Model
 ### Dataset
 ### Results
 
 ## 5. Genetative Adversarial Networks (GAN)
 
-### Setup Information 
+### Setup
 ### Model
 ### Dataset
 ### Results
