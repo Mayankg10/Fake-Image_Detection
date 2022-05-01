@@ -175,3 +175,13 @@ https://www.youtube.com/watch?v=kYeLBZMTLjk
 https://towardsdatascience.com/realistic-deepfakes-colab-e13ef7b2bba7
 
 https://hal-upec-upem.archives-ouvertes.fr/hal-01867298/document
+
+[1] Yadav, Suman ; Saxena, Manish., “A Novel VLSI Architecture for Reversible ALU Logic
+Gate Structure” International journal of computer applications, 2015-06-18,Vol.120 (2), p.1-3
+
+[2] Cheng, Long ; Li, Yi ; Yin, Kang-Sheng , “A self-organizing neural network model for a
+mechanism of visual pattern recognition[M]” Competition and cooperation in neural nets, Springer,
+Berlin, Heidelberg, pp.267-285. 1982
+
+[3] LeCun Y, Boser B, Denker J S, et al, “Back propagation applied to handwritten zip code
+recognition[J],” Neural com-putation, vol. 1, no. 4, pp. 541-551, Sep. 19
