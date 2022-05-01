@@ -197,10 +197,79 @@ methods on real-world data while spending minimal efforts on preprocessing and f
 
 ## 5. Genetative Adversarial Networks (GAN)
 
+Generative Adversarial Networks, or GANs for short, are an approach to generative modeling
+using deep learning methods, such as convolutional neural networks.
+
+Generative modeling is an unsupervised learning task in machine learning that involves
+automatically discovering and learning the regularities or patterns in input data in such a way
+that the model can be used to generate or output new examples that plausibly could have been
+drawn from the original dataset.
+
+GANs are a clever way of training a generative model by framing the problem as a supervised
+learning problem with two sub-models: the generator model that we train to generate new
+examples, and the discriminator model that tries to classify examples as either real (from the
+domain) or fake (generated). The two models are trained together in a zero-sum game,
+adversarial, until the discriminator model is fooled about half the time, meaning the generator
+model is generating plausible examples.
+
+GANs are an exciting and rapidly changing field, delivering on the promise of generative models
+in their ability to generate realistic examples across a range of problem domains, most notably
+in image-to-image translation tasks such as translating photos of summer to winter or day to
+night, and in generating photorealistic photos of objects, scenes, and people that even humans
+cannot tell are fake.
+
+#### Unsupervised Learning
+
+![image](https://user-images.githubusercontent.com/79482851/166132026-690d9706-9166-48fb-b379-9c11cb5a69a0.png)
+
+#### Supervised Learning
+
+![image](https://user-images.githubusercontent.com/79482851/166132043-08bbdd05-7383-40da-a162-ce022f6f467b.png)
+
+#### Generative Model
+
+![image](https://user-images.githubusercontent.com/79482851/166132055-d4fe22b9-60b4-4d76-aeff-d3f3968e25f5.png)
+
 ### Setup
+
+* Generator:
+  * Given input of noise (latent) vector, the Generator produces an image.
+  * I’m only using Dense layers. But the network can be complicated based
+on the application.
+  * Given an input image, the Discriminator outputs the likelihood of the image
+being real.
+  * Constructed two models and put them against each other.
+  * I do this by defining a training function, loading the data set, re-scaling our
+training images and setting the ground truths.
+* Data Set:
+  * The training and testing dataset can be found under the "data" folder ○ For
+the example of the ipynb my files are saved in a google drive folder at
+"/content/drive/My Drive/Colab Notebooks/ArtificialIntelligence/images" To
+run the same .ipynb file, you must download the data and create a new
+folder called ‘fakeImage with the ‘images’ folder inside of it as well.
+
 ### Model
-### Dataset
-### Results
+
+* GANs typically work with image data and use Convolutional Neural
+Networks, or CNNs, as the generator and discriminator models.
+* The reason for this may be both because the first description of the
+technique was in the field of computer vision and used CNNs and image
+data, and because of the remarkable progress that has been seen in
+recent years using CNNs more generally to achieve state-of-the-art results
+on a suite of computer vision tasks such as object detection and face
+recognition.
+* Modeling image data means that the latent space, the input to the
+generator, provides a compressed representation of the set of images or
+photographs used to train the model. It also means that the generator
+generates new images or photographs, providing an output that can be
+easily viewed and assessed by developers or users of the model.
+* It may be this fact above others, the ability to visually assess the quality of
+the generated output, that has both led to the focus of computer vision
+applications with CNNs and on the massive leaps in the capability of
+GANs as compared to other generative models, deep learning based or
+otherwise.
+
+![image](https://user-images.githubusercontent.com/79482851/166132098-2ea3d6df-0fb0-4af9-be56-40a9b076e378.png)
 
 ## References
 https://github.com/DariusAf/MesoNet
@@ -227,6 +296,8 @@ https://github.com/agusgun/FakeImageDetector
 
 https://youtu.be/uqomO_BZ44g
 
+https://machinelearningmastery.com/what-are-generative-adversarial-networks-g
+ans/
 
 [Back to Top](#Fake-Image-Detection-using-Deep-Learning)
   <a name="Fake-Image-Detection-using-Deep-Learning"></a>    
