@@ -17,11 +17,44 @@ Using latest image editing softwares, it is possible to make alterations on imag
 * [References](https://github.com/Mayankg10/Fake-Image_Detection#References)
 
 ## 1. Error Level Analysis (ELA)
+ 
+Many images are spread in the virtual world of social media. With the many editing software that allows so there is no doubt that many forgery images. By forensic the image using Error Level Analysis to find out the compression ratio between the original image and the fake image, because the original image compression and fake images are different. In addition to knowing whether the image is genuine or fake can analyze the metadata of the image, but the possibility of metadata can be changed. 
+
+In this case we apply Deep Learning to recognize images of manipulations through the dataset of a fake image and original images via Error Level Analysis on each image and supporting parameters for error rate analysis. The result of our experiment is that we get the best accuracy of training 98.8% and 94.4% validation by going through 30 epoch.
 
 ### Setup
+
+* Dataset
+  * The training and testing dataset can be found on the Kaggle site: https://www.kaggle.com/datasets/sophatvathana/casia-dataset
+  * The file path for my downloaded data is under "/content/drive/MyDrive/Colab Notebooks/Image_Detector/CASIA2/" which contains two folders, one for real images and one for fake images.
+  * To run the same .ipynb file, you must download the data, change all the data file path and simply run the file.
+* Model Training 
+  * All the model training are saved as a seperate file called "model_casia_run1.h5"
+  * To run the same .ipynb file, you must download the data and create a new
+folder called ‘CASIA1’ with the "model_casia_run1.h5" file called in the function.
+
 ### Model
+
+![image](https://user-images.githubusercontent.com/79482851/166129029-b34433f1-06ef-4605-9e31-006c8806fba7.png)
+
+![image](https://user-images.githubusercontent.com/79482851/166129033-d7aaa6d7-b0b6-4c0d-8926-3ccea4fcc897.png)
+
 ### Dataset
+
+The Error Level Analysis method uses a kaggle dataset called CASIA1 which has over 7491 real images and 5123 fake images of real world objects. This dataset was perfect for this method as we can test the Machine/Deep Learning model on the real world images to classify the images as fake or real.
+
+Class | Fake | Real
+| :--- | ---: | :---:
+Training  | 5123 | 7491
+Testing  | 21000 | 4100
+
 ### Results
+
+By using ELA and CNN model, I was able to get 13854 real images correct out of 14708 images with a 94.4% accuracy rate and 2092 fake images out of 2117 images with a accuracy rate of 98.8%.  
+
+Model | Fake | Real | Total
+| :--- | ---: | :---: | :---:
+CNN  | 98.8% | 94.1% | 96.5%
 
 ## 2. Mesonet
 Due to the increase in popularity of social media and the explosion of technology over
