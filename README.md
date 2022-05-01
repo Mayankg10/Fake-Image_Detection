@@ -18,6 +18,11 @@ Using latest image editing softwares, it is possible to make alterations on imag
 
 ## 1. Error Level Analysis (ELA)
 
+### Setup Information 
+### Model
+### Dataset
+### Results
+
 ## 2. Mesonet
 Due to the increase in popularity of social media and the explosion of technology over
 the past decade, images and videos are becoming very common digital objects. With the volume
@@ -67,16 +72,106 @@ Class | Deep Fake | Real
 Deep-fake Training  | 5111 | 7250
 Deep-fake Testing  | 2889 | 4259
 
+### Results
+Out of the 19,509 total images the model was able to get the accuracies depicted below.
+Although in the .ipynb file in the repository, the accuracy reported is different in order to be in
+alignment with the dataset size of other group members.
+
+Class | Deep Fake | Real | Total
+| :--- | ---: | :---: | :---:
+Meso-4  | 88.2% | 90.1% | 89.1%
+
+
 ## 3. Cross Entropy using Neural Network
+A feedforward neural network performs very well especially in image processing. A neural networks evolved from the multilayer perceptron (MLP). neural networks have three structural characteristics: local connection, weight sharing and downsampling. Weight
+sharing makes the network structure of neural networks more similar to biological neural networks.
+Local connections means that each neuron in layer n-1 is connected to all neurons in layer n, but
+between neurons in layer n-1 and some neurons in layer n. This feature helps speed up the file
+transfer between neurons in each layer.
+
+### Setup Information 
+* Dataset
+  * For collecting data, I chose the Mnist database that can be downloaded
+directly on the Internet. This is a database that provides handwritten data
+sets, so that we can directly perform deep learning of neural networks.
+  * I choose python to train my neural network, because python can easily
+call the mnist database and numpy database.
+  * To install the MNIST dataset in my method ,I just need to type the order below:
+!pip install mnist
+* The structure of Neural network
+  * For Training a neural network generally consists of two stages:
+forward phase: Input parameters are passed through the entire network.
+backward phase: Backpropagation updates gradient and weight.
+  * In the forward phase, each layer needs to store some data (such as input data,
+intermediate values, etc.). These data will be used in the backward phase.
+  * In the backward phase, each layer gets the output gradient and also
+returns the gradient as input. What is obtained is the gradient of loss for
+the output of this layer, and what is returned is the gradient of loss for the
+input of this layer.I improved the whole system by using cross entropy
+function
+
+### Model
+The first layer:
+I built a sliding window in the first layer that slides back and forth with a specific step size
+across the input image. After operation, we get the feature map of the input image, which is the local
+feature extracted by the first layer, and the kernel shares parameters. During the training process of the
+entire network, the kernels containing the weights are also continuously updated until the training is
+completed. The first layer has multiple cores, because weight sharing means that each core can only
+extract one feature, so in order to improve the computing power of the entire system, multiple cores
+need to be set.
+
+![image](https://user-images.githubusercontent.com/79482851/166128329-c87ea59b-870d-4a4a-b7d3-93340ef0f30a.png)
+
+The main function of the second layer is to reduce the dimensionality of the output of the first
+layer. Dimensionality reduction is to remove redundant information, compress features, simplify
+network complexity, reduce computation, reduce memory consumption.
+
+The third layer I call the softmax layer, Softmax turns arbitrary real values into probabilities.
+This is also the most critical step in image judgment, because this layer converts the values calculated
+by the upper two layers into probabilities to determine whether the image is correct.
+
+The cross-entropy loss function is introduced in the backward phase. The definition of the
+cross-entropy loss function is the gap between the two probabilities. Through this function, the
+probability I get through the forward pass and the actual predicted probability can be well obtained.
+The gap between them can be updated with more accurate gradient and weight through backward
+calculation.
+
+Then summing forward pass and backward pass I can get a complete neural network.
+
+### Dataset
+The MNIST database of handwritten digits, available from this page, has a training set of
+60,000 examples, and a test set of 10,000 examples. It is a subset of a larger set available from NIST.
+The digits have been size-normalized and centered in a fixed-size image.
+
+It is a good database for people who want to try learning techniques and pattern recognition
+methods on real-world data while spending minimal efforts on preprocessing and formatting.
+
+![image](https://user-images.githubusercontent.com/79482851/166128352-fc6602ee-c242-4a36-874b-96a7175d1b7b.png)
+
+### Results
+
+![image](https://user-images.githubusercontent.com/79482851/166128360-9b4ae2e2-a3de-4702-9da9-70c23e067545.png)
+
 
 ## 4. Convolution Neural Network (CNN)
 
+### Setup Information 
+### Model
+### Dataset
+### Results
+
 ## 5. Genetative Adversarial Networks (GAN)
 
-## Datasets
+### Setup Information 
+### Model
+### Dataset
+### Results
 
 ## References
 https://github.com/DariusAf/MesoNet
+
 https://www.youtube.com/watch?v=kYeLBZMTLjk
+
 https://towardsdatascience.com/realistic-deepfakes-colab-e13ef7b2bba7
+
 https://hal-upec-upem.archives-ouvertes.fr/hal-01867298/document
