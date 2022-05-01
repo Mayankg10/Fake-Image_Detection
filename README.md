@@ -1,5 +1,7 @@
 # Fake-Image Detection using Deep Learning
-The objective of this project is to identify fake images(Fake images are the images that are digitally altered images). The problem with existing fake image detection system is that they can be used detect only specific tampering methods like splicing, coloring etc. We approached the problem using machine learning and neural network to detect almost all kinds of tampering on images.
+The objective of this project is to identify fake images(Fake images are the images that are digitally altered images). The problem with existing fake image detection system is that they can be used detect only specific tampering methods like splicing, coloring etc. 
+
+We approached the problem using machine learning and neural network to detect almost all kinds of tampering on images.
 
 Using latest image editing softwares, it is possible to make alterations on image which are too difficult for human eye to detect. Even with a complex neural network, it is not possible to determine whether an image is fake or not without identifying a common factor across almost all fake images. So, instead of giving direct raw pixels to the neural network, we gave error level analysed image.
 
@@ -218,3 +220,13 @@ Berlin, Heidelberg, pp.267-285. 1982
 
 [3] LeCun Y, Boser B, Denker J S, et al, “Back propagation applied to handwritten zip code
 recognition[J],” Neural com-putation, vol. 1, no. 4, pp. 541-551, Sep. 19
+
+https://www.kaggle.com/datasets/sophatvathana/casia-dataset
+
+https://github.com/agusgun/FakeImageDetector
+
+https://youtu.be/uqomO_BZ44g
+
+
+[Back to Top](#Fake-Image-Detection-using-Deep-Learning)
+  <a name="Fake-Image-Detection-using-Deep-Learning"></a>    
