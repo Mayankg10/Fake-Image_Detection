@@ -19,6 +19,53 @@ Using latest image editing softwares, it is possible to make alterations on imag
 ## 1. Error Level Analysis (ELA)
 
 ## 2. Mesonet
+Due to the increase in popularity of social media and the explosion of technology over
+the past decade, images and videos are becoming very common digital objects. With the volume
+of digital images available now, different techniques have emerged in ways to alter pictures. This
+method tackles one approach to being able to detect a deep-fake image of someone as opposed to
+a real image.
+
+Deep-fake images are images in which an existing person’s features can be changed or
+replaced by someone else’s likeness
+
+![image](https://user-images.githubusercontent.com/79482851/166126379-74996175-0fcd-4f7c-b194-e3c7492291ee.png)
+
+### Setup Information 
+* Dataset
+  * The training and testing dataset can be found under the "data" folder
+  * For the example of the ipynb my files are saved in a google drive folder at
+"/content/drive/My Drive/Colab Notebooks/mesonet/data"
+  * To run the same .ipynb file, you must download the data and create a new
+folder called ‘mesonet’ with the ‘data’ folder inside of it as well.
+* Pretrained Model Weights
+  * Pre obtained weights are located in the "weights" folder
+  * To speed testing purposes along and for ease of execution, the weights are
+located in "/content/drive/My Drive/Colab Notebooks/mesonet/weights"
+  * To run the same .ipynb file, you must download the data and create a new
+folder called ‘mesonet’ with the ‘weights’ folder inside of it as well.
+
+### Meso-4 Model
+The Meso-4 network starts off 4 successive layers of convolution and pooling, which is
+followed by one dense layer and then a hidden layer. The convolutional layers use the relu
+activation function to help introduce non-linearity into our results. Here is a flowchart example
+of the model. The Meso-4 model set up in this way has a total of 27,977 total trainable params.
+The model was also supplied with pre-trained weights from the author, these were used to
+increase speed of testing and running my program.
+
+![image](https://user-images.githubusercontent.com/79482851/166126448-f33d26fb-6610-4b0a-98cc-ab98afdb595f.png)
+
+### Dataset
+The dataset used in the project is a deep-fake dataset created by the makers of the
+Meso-net model. The images used to create the deep-fake images were obtained with the mass
+amount of digital images and videos flooding the internet nowadays. The authors used the
+Viola-Jones detector for extracting features from all the faces, and then a trained neural network
+for aligning the features on faces. In the table below is the split of the dataset on the training and
+testing images.
+
+Class | Deep Fake | Real
+| :--- | ---: | :---:
+Deep-fake Training  | 5111 | 7250
+Deep-fake Testing  | 2889 | 4259
 
 ## 3. Cross Entropy using Neural Network
 
@@ -29,3 +76,7 @@ Using latest image editing softwares, it is possible to make alterations on imag
 ## Datasets
 
 ## References
+https://github.com/DariusAf/MesoNet
+https://www.youtube.com/watch?v=kYeLBZMTLjk
+https://towardsdatascience.com/realistic-deepfakes-colab-e13ef7b2bba7
+https://hal-upec-upem.archives-ouvertes.fr/hal-01867298/document
