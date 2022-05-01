@@ -296,8 +296,7 @@ https://github.com/agusgun/FakeImageDetector
 
 https://youtu.be/uqomO_BZ44g
 
-https://machinelearningmastery.com/what-are-generative-adversarial-networks-g
-ans/
+https://machinelearningmastery.com/what-are-generative-adversarial-networks-gans/
 
 [Back to Top](#Fake-Image-Detection-using-Deep-Learning)
   <a name="Fake-Image-Detection-using-Deep-Learning"></a>    
