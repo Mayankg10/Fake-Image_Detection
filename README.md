@@ -80,6 +80,7 @@ replaced by someone else’s likeness
 folder called ‘mesonet’ with the ‘data’ folder inside of it as well.
 * Pretrained Model Weights
   * Pre obtained weights are located at https://github.com/DariusAf/MesoNet/tree/master/weights
+  * You will need to download the file called 'Meso4_DF.h5'
   * To speed testing purposes along and for ease of execution, the weights are
 located in "/content/drive/My Drive/Colab Notebooks/mesonet/weights"
   * To run the same .ipynb file, you must download the weights and create a new
