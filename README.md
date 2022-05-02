@@ -72,15 +72,15 @@ replaced by someone else’s likeness
 
 ### Setup
 * Dataset
-  * The training and testing dataset can be found at https://github.com/DariusAf/MesoNet/tree/master/test_images
-  * Once downloaded you will need to change the folder named 'test_images' to 'data'
+  * The training and testing dataset can be found at https://drive.google.com/drive/folders/1YIGj57VJJ3rbgTubkhO9YaTQFsqRHet_?usp=sharing
+  * Images are saved in the 'data' folder
   * For the example of the ipynb my files are saved in a google drive folder at
 "/content/drive/My Drive/Colab Notebooks/mesonet/data"
   * To run the same .ipynb file, you must download the data and create a new
 folder called ‘mesonet’ with the ‘data’ folder inside of it as well.
 * Pretrained Model Weights
-  * Pre obtained weights are located at https://github.com/DariusAf/MesoNet/tree/master/weights
-  * You will need to download the file called 'Meso4_DF.h5'
+  * Pre obtained weights are located at https://drive.google.com/drive/folders/1YIGj57VJJ3rbgTubkhO9YaTQFsqRHet_?usp=sharing
+  * You will need to download the folder called 'weights'
   * To speed testing purposes along and for ease of execution, the weights are
 located in "/content/drive/My Drive/Colab Notebooks/mesonet/weights"
   * To run the same .ipynb file, you must download the weights and create a new
