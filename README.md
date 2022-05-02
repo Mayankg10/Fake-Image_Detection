@@ -73,6 +73,7 @@ replaced by someone else’s likeness
 ### Setup
 * Dataset
   * The training and testing dataset can be found at https://github.com/DariusAf/MesoNet/tree/master/test_images
+  * Once downloaded you will need to change the folder named 'test_images' to 'data'
   * For the example of the ipynb my files are saved in a google drive folder at
 "/content/drive/My Drive/Colab Notebooks/mesonet/data"
   * To run the same .ipynb file, you must download the data and create a new
